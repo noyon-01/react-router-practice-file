@@ -1,3 +1,5 @@
+import { NavLink } from "react-router";
+
 export default function Navber() {
   return (
     <div className="bg-base-100 shadow-sm">
@@ -26,16 +28,44 @@ export default function Navber() {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
             >
               <li>
-                <a>Home</a>
+                <NavLink
+                  className={({ isActive }) =>
+                    `font-semibold ${isActive ? "text-red-600" : ""}`
+                  }
+                  to={"/"}
+                >
+                  Home
+                </NavLink>
               </li>
               <li>
-                <a>About</a>
+                <NavLink
+                  className={({ isActive }) =>
+                    `font-semibold ${isActive ? "text-red-600" : ""}`
+                  }
+                  to={"/about"}
+                >
+                  About
+                </NavLink>
               </li>
               <li>
-                <a>Service</a>
+                <NavLink
+                  className={({ isActive }) =>
+                    `font-semibold ${isActive ? "text-red-600" : ""}`
+                  }
+                  to={"/service"}
+                >
+                  Service
+                </NavLink>
               </li>
               <li>
-                <a>Contact</a>
+                <NavLink
+                  className={({ isActive }) =>
+                    `font-semibold ${isActive ? "text-red-600" : ""}`
+                  }
+                  to={"/contact"}
+                >
+                  Contact
+                </NavLink>
               </li>
             </ul>
           </div>
@@ -44,16 +74,44 @@ export default function Navber() {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <a>Home</a>
+              <NavLink
+                className={({ isActive }) =>
+                  `font-semibold ${isActive ? "text-red-600" : ""}`
+                }
+                to={"/"}
+              >
+                Home
+              </NavLink>
             </li>
             <li>
-                <a>About</a>
+              <NavLink
+                className={({ isActive }) =>
+                  `font-semibold ${isActive ? "text-red-600" : ""}`
+                }
+                to={"/about"}
+              >
+                About
+              </NavLink>
             </li>
             <li>
-              <a>Service</a>
+              <NavLink
+                className={({ isActive }) =>
+                  `font-semibold ${isActive ? "text-red-600" : ""}`
+                }
+                to={"/service"}
+              >
+                Service
+              </NavLink>
             </li>
             <li>
-              <a>Contact</a>
+              <NavLink
+                className={({ isActive }) =>
+                  `font-semibold ${isActive ? "text-red-600" : ""}`
+                }
+                to={"/contact"}
+              >
+                Contact
+              </NavLink>
             </li>
           </ul>
         </div>
